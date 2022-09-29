@@ -19,20 +19,21 @@
 # When run, the code should print the iteration number, the new value
 # of x, x_new, and the value of f(x_new) at each iteration.
 
-  def f(x):
+def f(x):
   # evaluate f at x
   return x**3 + 4*x**2 - 10
 
-def fprime(x)
+def fprime(x):
   # evaluate f' at x
-    return 3*x + 8*x
+    return 3*x**2 + 8*x
 
 # set initial value
-x_initial = 0.1
+x_new = 9999999
 
 # perform 10 iterations of Newton's method, printing out 
-for i in range(10):
-    x_od = x_new
-    X_new = x_old - f(x_old) / fprime(x_old)
+for i in range(50):
+    x_old = x_new
+    x_new = x_old - f(x_old) / fprime(x_old)
+    
 
 print(i, x_new, f(x_new))
